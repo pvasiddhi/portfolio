@@ -100,7 +100,22 @@ body {
 .hero-content {
     z-index: 2;
 }
-
+.hero-section::before,
+.goal-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: url('images/32fa71d7-7b47-4504-826d-eceb7f79dc34.jpg') center/cover no-repeat;
+    opacity: 0.22;
+    border-radius: 18px;
+    pointer-events: none;
+}
+.hero-section,
+.goal-section {
+    position: relative;
+    overflow: hidden;
+}
 .hero-section h1 {
     font-family: var(--heading-font);
     font-size: 3rem;
